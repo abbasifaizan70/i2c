@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Donation Widget</title>
+</head>
+
+<body>
+    <!-- main div  -->
+    <div class="container">
+        <div class="column-flex">
+
+            <!-- heading -->
+            <div id="heading">
+                <h3>
+                    <strong>$ <span id="RemainingBudget"></span></strong> still needed for the project
+                </h3>
+            </div>
+            <!-- end heading -->
+
+            <!-- donation calculator -->
+            <div id="donor-form">
+                <progress value="0" max="300" id="progress-bar"> 32% </progress>
+                <div>
+                    <p>
+                        <strong>
+                            Only <span id="days"></span> days left
+                        </strong> to fund this project.
+                    </p>
+                    <p>
+                        Join the <strong id="donors"></strong> other donors who have already supported this project. Every dollar helps.
+                    </p>
+                    <!-- <form> -->
+                    <div class="row-flex" id="form">
+                        <div class="row-flex">
+                            <label>$</label>
+                            <input type="number" id="amount" min="0" max="300">
+                        </div>
+                        <div>
+                            <button id="give-now" onclick="addAmount()">Give Now</button>
+                        </div>
+                    </div>
+                    <!-- </form> -->
+                    <span id="errorMessage"></span>
+                    <div>
+                        <a href="">Why give $50?</a>
+                    </div>
+                </div>
+            </div>
+            <!-- end donation calculator -->
+
+            <!-- footer -->
+            <div id="footer-div" class="row-flex">
+                <div>
+                    <button id="save" onclick="save_Amount_In_local_hitory()">Save for later</button>
+                </div>
+                <div>
+                    <button>Tell your friends</button>
+                </div>
+            </div>
+            <!-- end footer -->
+
+        </div>
+    </div>
+    <!-- end main div -->
+
+</body>
+
+<script src="assets/myScript.js"></script>
+
+</html>

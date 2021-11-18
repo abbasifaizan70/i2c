@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/styleBootstrap.css">
+    <title>Donation Widget</title>
+</head>
+
+<body>
+    <!-- main div  -->
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-12 m-0 m-auto">
+                <div class="flex-column">
+                    <!-- heading -->
+                    <div class="rounded p-3 mb-4" id="heading">
+                        <h3 class="text-center text-white m-0">
+                            <strong>$ <span id="RemainingBudget"></span></strong> still needed for the project
+                        </h3>
+                    </div>
+                    <!-- end heading -->
+
+                    <!-- donation calculator -->
+                    <div class="rounded-sm rounded mb-4" id="donor-form">
+                        <progress value="0" max="300" class="wi" id="progress-bar"> 32% </progress>
+                        <div>
+                            <p class="m-0 pb-3">
+                                <strong>
+                                 Only <span id="days"></span> days left
+                                 </strong> to fund this project.
+                            </p>
+                            <p class="m-0 pb-4">
+                                Join the <strong id="donors"></strong> other donors who have already supported this project. Every dollar helps.
+                            </p>
+                            <!-- <form> -->
+                            <div class="row-flex" id="form">
+                                <div class="row-flex">
+                                    <label class="ml-3">$</label>
+                                    <input type="number" class="p-4 pl-5 rounded" id="amount" min="0" max="300">
+                                </div>
+                                <div class="mr-0 ml-auto">
+                                    <button id="give-now" class=" p-4 rounded border-0 text-white " onclick="addAmount()">Give Now</button>
+                                </div>
+                            </div>
+                            <!-- </form> -->
+                            <span class="text-danger p-3" id="errorMessage"></span>
+                            <div>
+                                <a href="">Why give $50?</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end donation calculator -->
+
+                    <!-- footer -->
+                    <div id="footer-div" class="row-flex">
+                        <div>
+                            <button id="save" class=" rounded" onclick="save_Amount_In_local_hitory()">Save for later</button>
+                        </div>
+                        <div class="ml-auto mr-0">
+                            <button class="rounded">Tell your friends</button>
+                        </div>
+                    </div>
+                    <!-- end footer -->
+
+                </div>
+            </div>
+        </div>
+        <!-- end main div -->
+    </div>
+</body>
+
+<script src="assets/myScript.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</html>
